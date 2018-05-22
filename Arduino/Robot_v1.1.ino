@@ -1,4 +1,5 @@
 //constant for ultrasound sensor
+//constante pour le capteur ultrasound
 #define left_trig  2
 #define left_echo  3
 
@@ -47,22 +48,22 @@ void setup() {
 
 void Go()
 {
-  //gauche
+  //gauche | left motor
   digitalWrite(left_1, HIGH);
   digitalWrite(left_2, LOW);
 
-  //droite
+  //droite | right motor
   digitalWrite(right_1, HIGH);
   digitalWrite(right_2, LOW);
 }
 
 void Back()
 {
-  //gauche
+  //gauche | left motor
   digitalWrite(left_1, LOW);
   digitalWrite(left_2, HIGH);
 
-  //droite
+  //droite | right motor
   digitalWrite(right_1, LOW);
   digitalWrite(right_2, HIGH);
 
@@ -71,11 +72,11 @@ void Back()
 
 void Stop()
 {
-  //gauche
+  //gauche | left motor
   digitalWrite(left_1, LOW);
   digitalWrite(left_2, LOW);
 
-  //droite
+  //droite | right motor
   digitalWrite(right_1, LOW);
   digitalWrite(right_2, LOW);
 
@@ -84,11 +85,11 @@ void Stop()
 
 void Go_left()
 {
-  //gauche
+  //gauche | left motor
   digitalWrite(left_1, LOW);
   digitalWrite(left_2, HIGH);
 
-  //droite
+  //droite | right motor
   digitalWrite(right_1, HIGH);
   digitalWrite(right_2, LOW);
 
@@ -97,11 +98,11 @@ void Go_left()
 
 void Go_right()
 {
-  //gauche
+  //gauche | left motor
   digitalWrite(left_1, HIGH);
   digitalWrite(left_2, LOW);
 
-  //droite
+  //droite | right motor
   digitalWrite(right_1, LOW);
   digitalWrite(right_2, HIGH);
 
@@ -121,13 +122,13 @@ void SonarSensor(int trigPin, int echoPin)
 }
 
 void loop() {
-  //Read ultrasound sensors
+  //Read ultrasound sensors | lit des valeurs du capteur ultrasound
   SonarSensor(left_trig, left_echo);
   cm_left = distance;
   SonarSensor(right_trig, right_echo);
   cm_right = distance;
-
-  //read IR distance
+ 
+  //read IR distance | lit les valeur du capteur de distance
   volts = analogRead(proximite) * 0.0048828125;
   distance_front = 17 * pow(volts, -1);
 
