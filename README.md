@@ -1,7 +1,7 @@
 # __Pi-bot__ _v1.1_
---
-![Pi-bot](img/pi-bot-1.jpg "pi-bot v1.1")
---
+
+[![Watch the video](img/pi-bot-1.jpg)](https://youtu.be/Tpy6M8AZNVg "regard la video")
+ 
 Pi-bot est un robot autonome DIY(do it yourself) il a la capacité de ce déplacer en ligne droite et d'éviter les obstacles qui sont devant lui. Pour le moment il ne sait que faire ça, mais des améliorations sont prévu dans le futur pour le rendre utilise et plus intelligent
 
 il utilise la carte arduino et est Opensource
